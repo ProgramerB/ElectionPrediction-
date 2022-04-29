@@ -141,8 +141,8 @@ tfidf_bjp_red=tf.computeTFIDF(tf_bjp_red,idfs_bjp)
 
 #print(tf.dictSort(tfidf_bjp_twi))
 #print(tf.dictSort(tfidf_bjp_red))
-showBarGraph(tfidf_bjp_twi,'blue','BJP','Twitter','Words','Frequency','TFIDF')
-showBarGraph(tfidf_bjp_red,'red','BJP','Reddit','Words','Frequency','TFIDF')
+showBarGraph(tfidf_bjp_twi,'#1a8cd8','BJP','Twitter','Words','Frequency','TFIDF')
+showBarGraph(tfidf_bjp_red,'#ff4500','BJP','Reddit','Words','Frequency','TFIDF')
 
 
 twi_bjp_tfidf=sorted(((value,key) for (key,value) in tfidf_bjp_twi.items()), reverse=True)
@@ -180,8 +180,8 @@ idfs_inc = tf.computeIDF(len(twi_inc_data)+len(red_inc_data),inc_data_count)
 tfidf_inc_twi=tf.computeTFIDF(tf_inc_twi,idfs_inc)
 tfidf_inc_red=tf.computeTFIDF(tf_inc_red,idfs_inc)
 
-showBarGraph(tfidf_inc_twi,'blue','INC','Twitter','Words','Frequecy','TFIDF')
-showBarGraph(tfidf_inc_red,'red','INC','Reddit','Words','Frequecy','TFIDF')
+showBarGraph(tfidf_inc_twi,'#1a8cd8','INC','Twitter','Words','Frequecy','TFIDF')
+showBarGraph(tfidf_inc_red,'#ff4500','INC','Reddit','Words','Frequecy','TFIDF')
 
 twi_inc_tfidf=sorted(((value,key) for (key,value) in tfidf_inc_twi.items()), reverse=True)
 #print(test)
@@ -191,11 +191,11 @@ red_inc_tfidf=sorted(((value,key) for (key,value) in tfidf_inc_red.items()), rev
 print(eventDictScore(red_inc_tfidf,red_inc_data))
 
 
-showBarGraph(eventDictScore(red_inc_tfidf,red_inc_data),'red','INC','Reddit','Events','Score','Sentiment Score')
-showBarGraph(eventDictScore(red_bjp_tfidf,red_bjp_data),'red','BJP','Reddit','Events','Score','Sentiment Score')
+showBarGraph(eventDictScore(red_inc_tfidf,red_inc_data),'#ff4500','INC','Reddit','Events','Score','Sentiment Score')
+showBarGraph(eventDictScore(red_bjp_tfidf,red_bjp_data),'#ff4500','BJP','Reddit','Events','Score','Sentiment Score')
 
-showBarGraph(eventDictScore(twi_inc_tfidf,twi_inc_data),'blue','INC','Twitter','Events','Score','Sentiment Score')
-showBarGraph(eventDictScore(twi_bjp_tfidf,twi_bjp_data),'blue','BJP','Twitter','Events','Score','Sentiment Score')
+showBarGraph(eventDictScore(twi_inc_tfidf,twi_inc_data),'#1a8cd8','INC','Twitter','Events','Score','Sentiment Score')
+showBarGraph(eventDictScore(twi_bjp_tfidf,twi_bjp_data),'#1a8cd8','BJP','Twitter','Events','Score','Sentiment Score')
 
 
 

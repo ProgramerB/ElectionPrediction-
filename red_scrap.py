@@ -21,7 +21,7 @@ def fetch():
     inc_keywords=['Indian National Congress','Rahul Gandhi','Sonia Gandhi','Manmohan Singh']
 
     num = int(input("Enter number of tweets:"))
-    num = num / 2
+    num = num / 8
 
     for key in bjp_keywords:
         sub=reddit.subreddit('all').search(key,limit=num)#IndiaSpeaks,indianews
